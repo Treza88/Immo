@@ -3,6 +3,7 @@ package fr.webforce.services;
 
 import fr.webforce.configurations.Connect;
 
+import fr.webforce.entities.Adresse;
 import fr.webforce.entities.Bien;
 
 import java.sql.*;
@@ -40,42 +41,41 @@ public class CommandSQL {
         }
 
     }
-    public void insert(Bien bien, int nb_piece, int surf_habit, int prix, int annee_const, boolean garage, boolean terrasse,
-                       boolean balcon, boolean jardin, String numero, String rue,String code_postal,String ville) throws SQLException {
+    public void insert(Bien bien, Adresse adresse) throws SQLException {
 
         Connection gc = Connect.getConnection();
 
-        try (PreparedStatement pst = gc.prepareStatement("INSERT INTO adresse VALUES(null,?,?,?,?")){
-            pst.setString(1,numero);
-            pst.setString(2,rue);
-            pst.setString(3,code_postal);
-            pst.setString(4,ville);
+        try (PreparedStatement st = gc.prepareStatement("INSERT INTO adresse VALUES(null,?,?,?,?")){
+            st.setString(1,adresse.getNumero());
+            st.setString(2,adresse.getRue());
+            st.setString(3,adresse.getCode_postal());
+            st.setString(4, adresse.getVille());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        try (Statement st = gc.createStatement()) {
-            ResultSet rs = st.executeQuery("SELECT id_adresse FROM adresse WHERE id_adresse=(SELECT MAX(id_adresse) FROM adresse)");
-
-                System.out.println(sb);
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+//        try (Statement st = gc.createStatement()) {
+//            ResultSet rs = st.executeQuery("SELECT id_adresse FROM adresse WHERE id_adresse=(SELECT MAX(id_adresse) FROM adresse)");
+//
+//               //System.out.println(sb);
+//            }
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
 
 
 
 
         try (PreparedStatement st = gc.prepareStatement("INSERT INTO bien VALUES(null,?,?,?,?,?,?,?,?,?,null")){
-            st.setString(1,bien.);
-            st.setInt(2,nb_piece);
-            st.setInt(3,surf_habit);
-            st.setInt(4,prix);
-            st.setInt(5,annee_const);
-            st.setBoolean(6,garage);
-            st.setBoolean(7,terrasse);
-            st.setBoolean(8,balcon);
-            st.setBoolean(9,jardin);
+            st.setString(1,bien.getType());
+            st.setInt(2,bien.getNb_piece());
+            st.setInt(3,bien.getSurf_habit());
+            st.setInt(4,bien.getPrix());
+            st.setInt(5,bien.getAnnee_const());
+            st.setBoolean(6,bien.isGarage());
+            st.setBoolean(7,bien.isTerrase());
+            st.setBoolean(8,bien.isBalcon());
+            st.setBoolean(9,bien.isJardin());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

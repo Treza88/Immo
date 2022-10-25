@@ -6,6 +6,22 @@ public class Adresse {
     String code_postal;
     String ville;
 
+    public String getNumero() {
+        return numero;
+    }
+
+    public String getRue() {
+        return rue;
+    }
+
+    public String getCode_postal() {
+        return code_postal;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
     public Adresse(String numero, String rue, String code_postal, String ville) {
         this.numero = numero;
         this.rue = rue;

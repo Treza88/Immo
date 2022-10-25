@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b9fe96ff-4bc3-4463-b7de-069cd4ac9818" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/webforce/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/webforce/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/webforce/configurations/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/webforce/configurations/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/webforce/entities/Adresse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/webforce/entities/Adresse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/webforce/entities/Bien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/webforce/entities/Bien.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/webforce/services/CommandSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/webforce/services/CommandSQL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
