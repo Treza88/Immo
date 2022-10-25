@@ -2,6 +2,7 @@ package fr.webforce.entities;
 
 public class Bien {
 
+
     String type;
     int nb_piece;
     int surf_habit;
@@ -11,6 +12,8 @@ public class Bien {
     boolean terrase;
     boolean balcon;
     boolean jardin;
+    int id_adresse;
+
 
     public String getType() {
         return type;
@@ -48,6 +51,10 @@ public class Bien {
         return jardin;
     }
 
+    public int getId_adresse(int anInt) {
+        return id_adresse;
+    }
+
     public Bien(String type, int nb_piece, int surf_habit, int prix, int annee_const, boolean garage, boolean terrase, boolean balcon, boolean jardin) {
         this.type = type;
         this.nb_piece = nb_piece;
@@ -57,6 +64,7 @@ public class Bien {
         this.garage = garage;
         this.terrase = terrase;
         this.balcon = balcon;
-        this.jardin = jardin;
+        this.id_adresse = id_adresse;
+
     }
 }
